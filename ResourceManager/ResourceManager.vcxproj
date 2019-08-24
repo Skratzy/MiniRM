@@ -123,6 +123,30 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="src\Defines.h" />
+    <ClInclude Include="src\miniz\miniz.h" />
+    <ClInclude Include="src\ResManAPI\FormatLoaders\ext\CImg.h" />
+    <ClInclude Include="src\ResManAPI\FormatLoaders\FormatLoader.h" />
+    <ClInclude Include="src\ResManAPI\FormatLoaders\ext\LodePNG.h" />
+    <ClInclude Include="src\ResManAPI\FormatLoaders\OBJLoader.h" />
+    <ClInclude Include="src\ResManAPI\FormatLoaders\ext\OBJ_Loader.h" />
+    <ClInclude Include="src\ResManAPI\FormatLoaders\PNGLoader.h" />
+    <ClInclude Include="src\ResManAPI\FormatLoaders\ext\tiny_obj_loader.h" />
+    <ClInclude Include="src\ResManAPI\ResourceManager.h" />
+    <ClInclude Include="src\ResManAPI\Resources\MeshResource.h" />
+    <ClInclude Include="src\ResManAPI\Resources\Resource.h" />
+    <ClInclude Include="src\ResManAPI\Resources\TextureResource.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\miniz\miniz.c" />
+    <ClCompile Include="src\ResManAPI\FormatLoaders\FormatLoader.cpp" />
+    <ClCompile Include="src\ResManAPI\FormatLoaders\ext\LodePNG.cpp" />
+    <ClCompile Include="src\ResManAPI\FormatLoaders\OBJLoader.cpp" />
+    <ClCompile Include="src\ResManAPI\FormatLoaders\PNGLoader.cpp" />
+    <ClCompile Include="src\ResManAPI\ResourceManager.cpp" />
+    <ClCompile Include="src\ResManAPI\Resources\MeshResource.cpp" />
+    <ClCompile Include="src\ResManAPI\Resources\TextureResource.cpp" />
+    <ClCompile Include="src\ResManMain.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
