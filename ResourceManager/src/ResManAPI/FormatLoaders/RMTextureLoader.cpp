@@ -5,17 +5,13 @@
 #include "../Resources/Resource.h"
 #include "../../Defines.h"
 
-RMTextureLoader::RMTextureLoader()
-{
+RMTextureLoader::RMTextureLoader() {
 	this->m_supportedExtensions.push_back(".rmtex");
 }
 
-RMTextureLoader::~RMTextureLoader()
-{
-}
+RMTextureLoader::~RMTextureLoader() {}
 
-Resource * RMTextureLoader::load(const char * path, const long GUID)
-{
+Resource* RMTextureLoader::load(const char* path, const long GUID) {
 	using namespace std;
 
 	// If it's in a zip, deal with it appropriately
@@ -51,8 +47,8 @@ Resource * RMTextureLoader::load(const char * path, const long GUID)
 
 		imageDataPtr = new (RM_MALLOC_FUNCTION(sizeof(unsigned char) * width * height * 4)) unsigned char;
 
-	// Read the filestream one line at a time and input the data into
-	// the imageData
+		// Read the filestream one line at a time and input the data into
+		// the imageData
 		while (inputStream >> lineData) {
 			lineIndex = 0;
 			// Per color, read the color until a comma is met, last element should be a newline
@@ -88,10 +84,9 @@ Resource * RMTextureLoader::load(const char * path, const long GUID)
 			}
 		}
 	}
-	else
-	{
+	else {
 		void* ptr = readFile(path, check);
-		
+
 		std::string tempString = (char*)ptr;
 		std::stringstream inputStream;
 		inputStream << tempString;
@@ -152,7 +147,7 @@ Resource * RMTextureLoader::load(const char * path, const long GUID)
 	res->setSizeGPU(width * height * sizeof(unsigned char) * 4);
 
 	MemoryManager::getInstance().deallocateStack(FUNCTION_STACK_INDEX, marker);
-	
+
 	// Return it out!
 	return res;
 }

@@ -3,8 +3,7 @@
 
 #include <string>
 
-class Resource
-{
+class Resource {
 private:
 	const long m_GUID;
 	std::string m_path;

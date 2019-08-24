@@ -110,7 +110,7 @@ void ResourceManager::init(const unsigned int capacityCPU, const unsigned int ca
 	}
 }
 
-Resource * ResourceManager::load(const char* path) {
+Resource* ResourceManager::load(const char* path) {
 
 	Resource* res = nullptr;
 	namespace fs = std::experimental::filesystem;
@@ -191,7 +191,7 @@ Resource * ResourceManager::load(const char* path) {
 	return res;
 }
 
-ResourceManager::AsyncJobIndex ResourceManager::asyncLoad(const char * path, std::function<void(Resource*)> callback) {
+ResourceManager::AsyncJobIndex ResourceManager::asyncLoad(const char* path, std::function<void(Resource*)> callback) {
 	long hashedPath = m_pathHasher(path);
 	Resource* res = nullptr;
 

@@ -14,23 +14,22 @@
 class Resource;
 class FormatLoader;
 
-class ResourceManager
-{
+class ResourceManager {
 private:
 	std::map<long, Resource*> m_resources;
-	
+
 	std::vector<FormatLoader*> m_formatLoaders;
-	
+
 	unsigned int m_capacityCPU;
 	unsigned int m_memUsageCPU;
 
 	unsigned int m_capacityGPU;
 	unsigned int m_memUsageGPU;
-	
-	std::mutex m_mutex; 
-	
+
+	std::mutex m_mutex;
+
 	std::hash<std::string> m_pathHasher;
-	
+
 	bool m_initialized;
 
 	struct AsyncJobCallback {
@@ -67,8 +66,8 @@ public:
 		static ResourceManager instance;
 		return instance;
 	}
-	ResourceManager(ResourceManager const&)	 = delete;
-	void operator=(ResourceManager const&)	 = delete;
+	ResourceManager(ResourceManager const&) = delete;
+	void operator=(ResourceManager const&) = delete;
 
 	ResourceManager();
 	~ResourceManager();

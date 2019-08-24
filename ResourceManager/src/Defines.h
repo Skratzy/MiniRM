@@ -36,7 +36,7 @@
 	s: size
 	t: type
 */
-#define RM_PLACEMENT_NEW(s, t) new (RM_MALLOC(s)) t;
+#define RM_PLACEMENT_NEW(s, t) new (RM_MALLOC(s)) t
 #endif //RM_PLACEMENT_NEW
 
 #ifndef RM_PLACEMENT_FREE
@@ -45,7 +45,7 @@
 	p: pointer
 	t: type
 */
-#define RM_PLACEMENT_FREE(p, t) p->~t; free(p);
+#define RM_PLACEMENT_FREE(p, t) p->~t; free(p)
 #endif //RM_PLACEMENT_FREE
 
 /*

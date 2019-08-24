@@ -7,8 +7,7 @@
 #include "../Resources/Resource.h"
 #include "../../Defines.h"
 
-class FormatLoader
-{
+class FormatLoader {
 protected:
 	std::vector<std::string> m_supportedExtensions;
 

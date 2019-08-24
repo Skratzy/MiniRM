@@ -6,8 +6,7 @@
 
 #include "FormatLoader.h"
 
-class OBJLoader : public FormatLoader
-{
+class OBJLoader : public FormatLoader {
 private:
 
 

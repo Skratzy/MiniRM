@@ -60,7 +60,7 @@ struct ResourceData {
 
 ResourceData initResMngr() {
 	ResourceData rd;
-	ResourceManager &rm = ResourceManager::getInstance();
+	ResourceManager& rm = ResourceManager::getInstance();
 	rm.init(1024, 1024 * 1024 * 1024);
 
 	// Roughly 25 bytes per loader (vector with strings of supported formats per formatloader)
@@ -95,7 +95,7 @@ int main() {
 	// Initialize the resource manager and register the format loaders to it and create variables for different tests.
 	ResourceData resourceData = initResMngr();
 
-	ResourceManager &rm = ResourceManager::getInstance();
+	ResourceManager& rm = ResourceManager::getInstance();
 
 	bool keepRunning = true;
 

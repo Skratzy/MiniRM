@@ -4,13 +4,12 @@
 #include "ext/LodePNG.h"
 #include <experimental/filesystem>
 
-Resource* PNGLoader::load(const char* path, const long GUID)
-{
+Resource* PNGLoader::load(const char* path, const long GUID) {
 	std::vector<unsigned char> image;
 	unsigned int width;
 	unsigned int height;
 	Resource* resource = nullptr;
-	
+
 	std::string filePath = path;
 	size_t check = 0;
 	check = filePath.find(".zip");
@@ -26,13 +25,13 @@ Resource* PNGLoader::load(const char* path, const long GUID)
 	}
 	else {
 
-		unsigned char* image_data = RM_PLACEMENT_NEW(image.size() * sizeof(unsigned char), unsigned char)
+		unsigned char* image_data = RM_PLACEMENT_NEW(image.size() * sizeof(unsigned char), unsigned char);
 		memcpy_s(image_data, image.size() * sizeof(unsigned char), image.data(), image.size() * sizeof(unsigned char));
 
 		// Fix size (VRAM vs RAM)
 		unsigned int size = sizeof(TextureResource);// +sizeof(unsigned int) * image.size();
 		// Attach the formatted image to a textureresource
-		resource = RM_PLACEMENT_NEW(size, TextureResource(width, height, image_data, GUID))
+		resource = RM_PLACEMENT_NEW(size, TextureResource(width, height, image_data, GUID));
 		// Size on DRAM
 		resource->setSizeCPU(size);
 		// Size on VRAM

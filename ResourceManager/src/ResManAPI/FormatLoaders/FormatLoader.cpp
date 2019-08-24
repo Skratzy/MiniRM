@@ -20,7 +20,7 @@ std::string FormatLoader::extractFile(const char* path, size_t check) {
 	mz_zip_archive archive;
 	memset(&archive, 0, sizeof(archive));
 	auto status = mz_zip_reader_init_file(&archive, zipLocation.c_str(), 0);
-	if (!status) 
+	if (!status)
 		RM_DEBUG_MESSAGE("Error while trying to open zip archive: " + zipLocation, 1);
 
 
@@ -59,7 +59,7 @@ void* FormatLoader::readFile(const char* path, size_t check) {
 	auto status = mz_zip_reader_init_file(&archive, zipLocation.c_str(), 0);
 	if (!status)
 		RM_DEBUG_MESSAGE("Error while trying to open zip archive: " + zipLocation, 1);
-	
+
 	auto index = mz_zip_reader_locate_file(&archive, pathInPackage.c_str(), "", 0);
 	mz_zip_archive_file_stat fileStat;
 	mz_zip_reader_file_stat(&archive, index, &fileStat);

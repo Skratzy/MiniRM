@@ -9,8 +9,7 @@
 #include <map>
 #include <unordered_map>
 
-Resource* OBJLoader::load(const char* path, const long GUID)
-{	
+Resource* OBJLoader::load(const char* path, const long GUID) {
 	// Checking if the asset is in a package
 	std::string filePath = path;
 	size_t check = 0;
@@ -32,8 +31,7 @@ Resource* OBJLoader::load(const char* path, const long GUID)
 
 	// STEP 1: LOAD THE OBJ FILE
 	/// ----------------------------------
-	try
-	{
+	try {
 		tinyobj::LoadObj(
 			&attrib,
 			&shapes,
@@ -43,8 +41,7 @@ Resource* OBJLoader::load(const char* path, const long GUID)
 			filePath.c_str()
 		);
 	}
-	catch (const std::exception& e)
-	{
+	catch (const std::exception& e) {
 		RM_DEBUG_MESSAGE(e.what(), 1);
 	}
 
@@ -57,13 +54,13 @@ Resource* OBJLoader::load(const char* path, const long GUID)
 
 	uint32_t* indicesPtr;
 	float* verticesDataPtr;
-	
+
 	unsigned int numIndices = 0;
 	for (const auto& shape : shapes)
 		numIndices += shape.mesh.indices.size();
 
-	verticesDataPtr = RM_PLACEMENT_NEW(numIndices * 8 * sizeof(float), float)
-	indicesPtr = RM_PLACEMENT_NEW(numIndices * sizeof(uint32_t), uint32_t)
+	verticesDataPtr = RM_PLACEMENT_NEW(numIndices * 8 * sizeof(float), float);
+	indicesPtr = RM_PLACEMENT_NEW(numIndices * sizeof(uint32_t), uint32_t);
 
 	unsigned int i = 0;
 
@@ -74,7 +71,7 @@ Resource* OBJLoader::load(const char* path, const long GUID)
 		{
 			// Vertex Index
 			indicesPtr[i] = i;
-			
+
 			verticesDataPtr[i * 8 + 0] = (attrib.vertices[3 * index.vertex_index + 0]);
 			verticesDataPtr[i * 8 + 1] = (attrib.vertices[3 * index.vertex_index + 1]);
 			verticesDataPtr[i * 8 + 2] = (attrib.vertices[3 * index.vertex_index + 2]);
@@ -108,7 +105,7 @@ Resource* OBJLoader::load(const char* path, const long GUID)
 	unsigned int sizeOnRAM = sizeof(MeshResource);
 	// 8 floats per vertex and currently 1 vertex per index (simple loading)
 	unsigned int verticesDataSize = numIndices * 8;
-	MeshResource* meshToBeReturned = RM_PLACEMENT_NEW(sizeOnRAM, MeshResource(verticesDataPtr, indicesPtr, verticesDataSize, numIndices, GUID))
+	MeshResource* meshToBeReturned = RM_PLACEMENT_NEW(sizeOnRAM, MeshResource(verticesDataPtr, indicesPtr, verticesDataSize, numIndices, GUID));
 	// Size on DRAM
 	meshToBeReturned->setSizeCPU(sizeOnRAM);
 	// Size on VRAM
