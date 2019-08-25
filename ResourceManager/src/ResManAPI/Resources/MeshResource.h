@@ -5,7 +5,7 @@
 #include "Resource.h"
 #include "../../Defines.h"
 
-class MeshResource : public Resource {
+class MeshResource : public MiniRM::Resource {
 private:
 	float* m_vertices;
 	unsigned int* m_indices;

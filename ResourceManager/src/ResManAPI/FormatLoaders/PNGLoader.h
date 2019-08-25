@@ -5,7 +5,7 @@
 
 class Resource;
 
-class PNGLoader : public FormatLoader {
+class PNGLoader : public MiniRM::FormatLoader {
 public:
 	PNGLoader() {
 		m_supportedExtensions.push_back(".png");
@@ -23,7 +23,7 @@ public:
 	2------->
 	3------->
 	*/
-	Resource* load(const char* path, const long GUID);
+	MiniRM::Resource* load(const char* path, const long GUID);
 };
 
 #endif //_RM_PNG_LOADER_

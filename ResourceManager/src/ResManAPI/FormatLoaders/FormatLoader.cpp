@@ -6,6 +6,8 @@
 #include "../../miniz/miniz.h"
 
 
+using namespace MiniRM;
+
 std::string FormatLoader::extractFile(const char* path, size_t check) {
 	// substrings for parts of the path
 	std::experimental::filesystem::path filePath(path);

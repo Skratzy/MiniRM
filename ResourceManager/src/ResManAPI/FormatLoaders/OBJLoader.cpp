@@ -9,7 +9,7 @@
 #include <map>
 #include <unordered_map>
 
-Resource* OBJLoader::load(const char* path, const long GUID) {
+MiniRM::Resource* OBJLoader::load(const char* path, const long GUID) {
 	// Checking if the asset is in a package
 	std::string filePath = path;
 	size_t check = 0;

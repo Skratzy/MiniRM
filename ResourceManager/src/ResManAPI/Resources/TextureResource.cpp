@@ -1,7 +1,7 @@
 #include "TextureResource.h"
 
 TextureResource::TextureResource(unsigned int width, unsigned int height, unsigned char* image, const long GUID)
-	: Resource(GUID) {
+	: MiniRM::Resource(GUID) {
 	m_width = width;
 	m_height = height;
 	m_image = image;

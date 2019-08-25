@@ -19,6 +19,13 @@
 #include "ResManAPI/Resources/TextureResource.h"
 
 
+/*
+	TODO: Implement unit tests
+*/
+
+
+using namespace MiniRM;
+
 class Model {
 public:
 	MeshResource* m_mesh = nullptr;
@@ -35,7 +42,7 @@ public:
 			ResourceManager::getInstance().decrementReference(m_tex->getGUID());
 	}
 
-	void setMeshCallback(Resource* mesh) {
+	void setMeshCallback(MiniRM::Resource* mesh) {
 		//std::lock_guard<std::mutex> lock(tempMutex);
 		if (m_mesh != nullptr)
 			ResourceManager::getInstance().decrementReference(m_mesh->getGUID());
@@ -43,7 +50,7 @@ public:
 		RM_DEBUG_MESSAGE("Set a new mesh -- " + std::string(m_mesh->getPath()), 0);
 	}
 
-	void setTextureCallback(Resource* tex) {
+	void setTextureCallback(MiniRM::Resource* tex) {
 		// TODO: Update size
 		if (m_tex != nullptr)
 			ResourceManager::getInstance().decrementReference(m_tex->getGUID());

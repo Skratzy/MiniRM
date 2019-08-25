@@ -7,6 +7,8 @@
 #include "FormatLoaders/FormatLoader.h"
 #include <fstream>
 
+using namespace MiniRM;
+
 // Only a single thread will ever run this function
 void ResourceManager::asyncLoadStart() {
 	while (m_running) {
@@ -110,7 +112,7 @@ void ResourceManager::init(const unsigned int capacityCPU, const unsigned int ca
 	}
 }
 
-Resource* ResourceManager::load(const char* path) {
+MiniRM::Resource* ResourceManager::load(const char* path) {
 
 	Resource* res = nullptr;
 	namespace fs = std::experimental::filesystem;
@@ -285,6 +287,6 @@ unsigned int ResourceManager::getCapacityGPU() {
 	return m_capacityGPU;
 }
 
-const std::map<long, Resource*>& ResourceManager::getResources() const {
+const std::map<long, MiniRM::Resource*>& ResourceManager::getResources() const {
 	return m_resources;
 }

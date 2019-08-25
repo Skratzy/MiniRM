@@ -6,7 +6,7 @@
 
 #include "FormatLoader.h"
 
-class OBJLoader : public FormatLoader {
+class OBJLoader : public MiniRM::FormatLoader {
 private:
 
 
@@ -16,7 +16,7 @@ public:
 	}
 	virtual ~OBJLoader() {}
 
-	virtual Resource* load(const char* path, const long GUID);
+	virtual MiniRM::Resource* load(const char* path, const long GUID);
 };
 
 #endif //_RM_OBJ_LOADER_HPP

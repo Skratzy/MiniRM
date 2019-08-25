@@ -4,11 +4,11 @@
 #include "ext/LodePNG.h"
 #include <experimental/filesystem>
 
-Resource* PNGLoader::load(const char* path, const long GUID) {
+MiniRM::Resource* PNGLoader::load(const char* path, const long GUID) {
 	std::vector<unsigned char> image;
 	unsigned int width;
 	unsigned int height;
-	Resource* resource = nullptr;
+	MiniRM::Resource* resource = nullptr;
 
 	std::string filePath = path;
 	size_t check = 0;

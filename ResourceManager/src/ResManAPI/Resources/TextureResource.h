@@ -5,7 +5,7 @@
 #include "../../Defines.h"
 
 
-class TextureResource : public Resource {
+class TextureResource : public MiniRM::Resource {
 private:
 	unsigned int m_width;
 	unsigned int m_height;

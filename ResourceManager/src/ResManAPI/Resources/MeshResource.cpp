@@ -1,7 +1,7 @@
 #include "MeshResource.h"
 
 MeshResource::MeshResource(float* vertices, uint32_t* indices, unsigned int numVertices, unsigned int numIndices, const long GUID)
-	: Resource(GUID) {
+	: MiniRM::Resource(GUID) {
 	m_vertexCount = numVertices;
 	m_vertices = vertices;
 
