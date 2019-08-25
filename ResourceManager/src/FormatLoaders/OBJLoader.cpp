@@ -1,4 +1,4 @@
-#include "../../Defines.h"
+#include "../Defines.h"
 #include "OBJLoader.h"
 #include "../Resources/MeshResource.h"
 

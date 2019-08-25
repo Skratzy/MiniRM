@@ -5,7 +5,7 @@
 #include <string>
 
 #include "../Resources/Resource.h"
-#include "../../Defines.h"
+#include "../Defines.h"
 
 namespace MiniRM {
 	class FormatLoader {

@@ -2,7 +2,7 @@
 #define _RM_TEXTURE_RESOURCE_H
 
 #include "Resource.h"
-#include "../../Defines.h"
+#include "../Defines.h"
 
 
 class TextureResource : public MiniRM::Resource {

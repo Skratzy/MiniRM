@@ -2,7 +2,7 @@
 #include <new>
 
 #include "ResourceManager.h"
-#include "../Defines.h"
+#include "Defines.h"
 #include "Resources/Resource.h"
 #include "FormatLoaders/FormatLoader.h"
 #include <fstream>

@@ -3,7 +3,7 @@
 #include <fstream>
 #include <experimental/filesystem>
 
-#include "../../miniz/miniz.h"
+#include "../miniz/miniz.h"
 
 
 using namespace MiniRM;

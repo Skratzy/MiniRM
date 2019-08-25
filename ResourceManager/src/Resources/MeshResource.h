@@ -3,7 +3,7 @@
 
 #include <vector>
 #include "Resource.h"
-#include "../../Defines.h"
+#include "../Defines.h"
 
 class MeshResource : public MiniRM::Resource {
 private:

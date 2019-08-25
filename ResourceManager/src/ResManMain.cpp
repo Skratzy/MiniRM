@@ -10,13 +10,13 @@
 
 #include "Defines.h"
 
-#include "ResManAPI/ResourceManager.h"
-#include "ResManAPI/FormatLoaders/PNGLoader.h"
-#include "ResManAPI/FormatLoaders/OBJLoader.h"
+#include "ResourceManager.h"
+#include "FormatLoaders/PNGLoader.h"
+#include "FormatLoaders/OBJLoader.h"
 
-#include "ResManAPI/Resources/Resource.h"
-#include "ResManAPI/Resources/MeshResource.h"
-#include "ResManAPI/Resources/TextureResource.h"
+#include "Resources/Resource.h"
+#include "Resources/MeshResource.h"
+#include "Resources/TextureResource.h"
 
 
 /*

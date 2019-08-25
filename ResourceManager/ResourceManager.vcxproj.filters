@@ -15,72 +15,72 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\ResManAPI\FormatLoaders\FormatLoader.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\ResManAPI\FormatLoaders\OBJLoader.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\ResManAPI\FormatLoaders\PNGLoader.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\ResManAPI\ResourceManager.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\ResManAPI\Resources\Resource.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="src\Defines.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="src\miniz\miniz.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\ResManAPI\FormatLoaders\ext\OBJ_Loader.h">
+    <ClInclude Include="src\ResourceManager.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\ResManAPI\FormatLoaders\ext\CImg.h">
+    <ClInclude Include="src\FormatLoaders\ext\CImg.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\ResManAPI\FormatLoaders\ext\LodePNG.h">
+    <ClInclude Include="src\FormatLoaders\ext\LodePNG.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\ResManAPI\FormatLoaders\ext\tiny_obj_loader.h">
+    <ClInclude Include="src\FormatLoaders\ext\OBJ_Loader.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\ResManAPI\Resources\MeshResource.h">
+    <ClInclude Include="src\FormatLoaders\ext\tiny_obj_loader.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\ResManAPI\Resources\TextureResource.h">
+    <ClInclude Include="src\FormatLoaders\FormatLoader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\FormatLoaders\OBJLoader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\FormatLoaders\PNGLoader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Resources\MeshResource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Resources\Resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Resources\TextureResource.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\ResManAPI\FormatLoaders\FormatLoader.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\ResManAPI\FormatLoaders\OBJLoader.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\ResManAPI\FormatLoaders\PNGLoader.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\ResManAPI\ResourceManager.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="src\miniz\miniz.c">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\ResManMain.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\ResManAPI\FormatLoaders\ext\LodePNG.cpp">
+    <ClCompile Include="src\FormatLoaders\ext\LodePNG.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\ResManAPI\Resources\MeshResource.cpp">
+    <ClCompile Include="src\FormatLoaders\FormatLoader.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\ResManAPI\Resources\TextureResource.cpp">
+    <ClCompile Include="src\FormatLoaders\OBJLoader.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\FormatLoaders\PNGLoader.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Resources\MeshResource.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Resources\TextureResource.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ResourceManager.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
