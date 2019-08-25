@@ -116,7 +116,7 @@ MiniRM::Resource* ResourceManager::load(const char* path) {
 
 	Resource* res = nullptr;
 	namespace fs = std::experimental::filesystem;
-	long hashedPath = m_pathHasher(path);
+	size_t hashedPath = m_pathHasher(path);
 
 	// Check if the resource already exists in the system
 	auto it = m_resources.find(hashedPath);
@@ -194,7 +194,7 @@ MiniRM::Resource* ResourceManager::load(const char* path) {
 }
 
 ResourceManager::AsyncJobIndex ResourceManager::asyncLoad(const char* path, std::function<void(Resource*)> callback) {
-	long hashedPath = m_pathHasher(path);
+	size_t hashedPath = m_pathHasher(path);
 	Resource* res = nullptr;
 
 	// Check if the resource already exists in the system (avoid getting locked in a mutex)
@@ -226,7 +226,7 @@ ResourceManager::AsyncJobIndex ResourceManager::asyncLoad(const char* path, std:
 		// The job already exists, push back another callback
 		if (asyncJobsIt != m_asyncResJobs.end()) {
 			asyncJobsIt->second.callbacks.push_back(AsyncJobCallback{ true, callback });
-			return AsyncJobIndex{ hashedPath, asyncJobsIt->second.callbacks.size() - 1 };
+			return AsyncJobIndex{ hashedPath, unsigned int(asyncJobsIt->second.callbacks.size() - 1) };
 		}
 		else {
 			std::vector<AsyncJobCallback> callbacks;
