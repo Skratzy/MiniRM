@@ -1,5 +1,5 @@
 -- premake5.lua
-project "MemoryManager"
+project "ResourceManager"
 	kind "StaticLib"
 	language "C++"
 	
