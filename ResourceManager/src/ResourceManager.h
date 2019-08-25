@@ -57,7 +57,7 @@ namespace MiniRM {
 
 	public:
 		struct AsyncJobIndex {
-			long GUID;
+			size_t GUID;
 			unsigned int IndexOfCallback;
 		};
 
