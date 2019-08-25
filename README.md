@@ -1,4 +1,4 @@
-# ResourceManager
+# MiniRM
 
 A resource manager maintained as a hobby project. 
 
