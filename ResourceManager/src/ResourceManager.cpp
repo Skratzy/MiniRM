@@ -254,7 +254,7 @@ void ResourceManager::removeAllAsyncJobs() {
 			callback.run = false;
 }
 
-void ResourceManager::decrementReference(long key) {
+void ResourceManager::decrementReference(size_t key) {
 	auto resource = m_resources.find(key);
 	if (resource != m_resources.end()) {
 		if (resource->second->derefer() == 0) {
@@ -287,6 +287,6 @@ unsigned int ResourceManager::getCapacityGPU() {
 	return m_capacityGPU;
 }
 
-const std::map<long, MiniRM::Resource*>& ResourceManager::getResources() const {
+const std::map<size_t, MiniRM::Resource*>& ResourceManager::getResources() const {
 	return m_resources;
 }

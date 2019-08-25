@@ -18,7 +18,7 @@ namespace MiniRM {
 
 	class ResourceManager {
 	private:
-		std::map<long, Resource*> m_resources;
+		std::map<size_t, Resource*> m_resources;
 
 		std::vector<FormatLoader*> m_formatLoaders;
 
@@ -84,7 +84,7 @@ namespace MiniRM {
 		void removeAsyncJob(AsyncJobIndex index);
 		void removeAllAsyncJobs();
 
-		void decrementReference(long key);
+		void decrementReference(size_t key);
 
 		void registerFormatLoader(FormatLoader* formatLoader);
 
@@ -93,7 +93,7 @@ namespace MiniRM {
 		unsigned int getMemUsageGPU();
 		unsigned int getCapacityGPU();
 
-		const std::map<long, Resource*>& getResources() const;
+		const std::map<size_t, Resource*>& getResources() const;
 		//void incrementReference(long key); SHOULDN'T BE NEEDED (done when loading already existing)
 	};
 }
